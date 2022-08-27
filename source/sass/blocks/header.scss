@@ -1,1 +1,48 @@
-/* a */
+.header {
+  padding-bottom: 40px;
+  background: url("../img/header-bg-mobile@1x.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: 45% top;
+  background-size: 100% 100%;
+
+  @include vp-768 {
+    background: url("../img/header-bg-desktop@1x.png");
+    background-position: 45% top;
+    background-size: 100% 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.header__wrap {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.header__toggle {
+  z-index: 11;
+}
+
+
+.header__box {
+  display: flex;
+  justify-content: center;
+}
+
+.header__link {
+  text-transform: uppercase;
+}
+
+.header__svg {
+  display: block;
+  margin: 0 auto;
+}

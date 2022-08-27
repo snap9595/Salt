@@ -1,0 +1,36 @@
+.footer {
+  background-color: $color-eclipse-black;
+}
+
+.footer__wrap {
+  display: grid;
+  justify-items: center;
+  max-width: 1153px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.footer__inner {
+  margin-top: 80px;
+  background-color: $color-nero-light-black;
+}
+
+.footer__text {
+  max-width: 1153px;
+  margin: 0 auto;
+  padding: 37px 28px;
+  font-family: $ff-raleway;
+  font-size: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-default-white;
+  text-align: center;
+  opacity: 0.8;
+
+  @include vp-768 {
+    padding: 0 28px;
+    font-size: 10px;
+    line-height: 200%;
+    opacity: 1;
+  }
+}

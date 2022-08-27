@@ -1,0 +1,38 @@
+.slider {
+  /*  width: 200px; */
+  padding-left: 28px;
+  padding-right: 28px;
+  height: 300px;
+  margin-top: 40px;
+}
+
+/* .slider__card {
+  height: 100px;
+} */
+
+.slider__button {
+  width: max-content;
+  padding: 18px;
+}
+
+.swiper-pagination {
+  display: none;
+
+  @include vp-768 {
+    position: absolute;
+    right: 15px;
+    top: 150px;
+  }
+}
+
+.swiper-pagination-bullet {
+  z-index: 15;
+  display: block;
+  width: 19px;
+  height: 22px;
+  background-image: url("../img/svg/icon-polygon.svg");
+}
+
+.swiper-pagination-bullet-active {
+  background-image: url("../img/svg/icon-polygon-active.svg");
+}

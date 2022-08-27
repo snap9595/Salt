@@ -1,0 +1,48 @@
+.video-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-self: center;
+  align-items: center;
+  width: 319px;
+  height: 196px;
+  margin-top: 28px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-image: url("../img/background-video-mobile@1x.jpg");
+
+  @include vp-768 {
+    width: 724px;
+    height: 444px;
+    background-image: url("../img/background-video-desktop@1x.jpg");
+  }
+
+  @include vp-1280 {
+    grid-row: span 2;
+    margin-top: 0;
+  }
+}
+
+.video-description__button {
+  margin-bottom: 12px;
+  width: 34px;
+  height: 34px;
+  background: $color-transparent;
+}
+
+.video-description__desc {
+  padding-bottom: 2px;
+  font-family: $ff-raleway;
+  font-weight: 600;
+  font-size: 0.61rem;
+  line-height: 140%;
+}
+
+.video-description__text {
+  margin: 0;
+  padding-bottom: 28px;
+  font-family: $ff-raleway;
+  font-weight: 800;
+  font-size: 0.81rem;
+  line-height: 169%;
+}

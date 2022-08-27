@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "node_modules/swiper/swiper";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -21,4 +22,14 @@
 @import "blocks/body";
 @import "blocks/header";
 @import "blocks/nav";
-@import "blocks/modal";
+@import "blocks/slider";
+@import "blocks/advantages";
+@import "blocks/production";
+@import "blocks/product-spotlight";
+@import "blocks/video-description";
+@import "blocks/feedback";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/twitter";
+@import "blocks/footer-nav";
+@import "blocks/contacts";
