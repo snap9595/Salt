@@ -34,3 +34,9 @@
     @content;
   }
 }
+
+@mixin vp-1920 {
+  @media (min-width: $vp-1920) {
+    @content;
+  }
+}

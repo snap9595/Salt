@@ -3,6 +3,7 @@ let navMain = document.querySelector('.nav');
 
 const initToggle = () => {
   navMain.classList.remove('no-js');
+  navToggle.classList.remove('no-js');
 
   navToggle.addEventListener('click', function () {
     toggleMenu();

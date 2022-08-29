@@ -7,6 +7,7 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  spaceBetween: 100,
 });
 
 export {swiper};

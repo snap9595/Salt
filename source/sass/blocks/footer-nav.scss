@@ -5,6 +5,23 @@
   margin-top: 60px;
   padding-left: 50px;
   padding-right: 50px;
+
+  @include vp-768 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: 110px 1fr;
+    column-gap: 90px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include vp-1280 {
+    column-gap: 130px;
+  }
 }
 
 .footer-nav__title {
@@ -26,10 +43,18 @@
   padding: 0;
   margin: 0;
   margin-top: 12px;
+
+  @include vp-1024 {
+    margin-top: 21px;
+  }
 }
 
 .footer-nav__item {
   margin-top: 6px;
+
+  @include vp-1024 {
+    margin-top: 10px;
+  }
 }
 
 .footer-nav__link {
@@ -40,4 +65,10 @@
   line-height: 129%;
   text-transform: uppercase;
   color: $color-default-white;
+}
+
+@include vp-1024 {
+  .footer-nav__inner {
+    margin-right: -5px;
+  }
 }

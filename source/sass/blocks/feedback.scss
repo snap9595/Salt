@@ -1,29 +1,62 @@
 .feedback {
+  margin-top: 47px;
   margin-bottom: 97px;
   color: $color-default-white;
   background-color: $color-nero-black;
+
+  @include vp-1024 {
+    margin-bottom: 98px;
+  }
 }
 
 .feedback__wrap {
   max-width: 1263px;
   margin: 0 auto;
   padding-left: 28px;
-  padding-right: 28px;
+  padding-right: 36px;
+
+  @include vp-1024 {
+    display: grid;
+    grid-template-columns: 1fr 640px;
+    column-gap: 20px;
+    /* padding-right: 0; */
+    padding-bottom: 81px;
+  }
+
+  @include vp-1440 {
+    padding-right: 0;
+  }
 }
 
 .feedback__title {
   margin: 0;
-  padding-top: 30px;
+  padding-top: 41px;
   font-weight: 700;
   font-size: 2.13rem;
   line-height: 118%;
+
+  @include vp-1024 {
+    padding-left: 4px;
+    padding-top: 128px;
+    font-size: 3.43rem;
+    line-height: 100%;
+  }
 }
 
 .feedback__subtitle {
+  margin-top: 46px;
+  margin-left: 3px;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 120%;
   display: flex;
   align-items: center;
   letter-spacing: -0.03em;
+
+  @include vp-1024 {
+    margin-top: 122px;
+    margin-left: 0;
+    font-size: 1.75rem;
+  }
 }

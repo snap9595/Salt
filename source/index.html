@@ -33,15 +33,15 @@
                 alt="site logo.">
             </picture>
           </a>
-          <button class="header__toggle page-header__toggle--closed page-header__toggle--nojs" type="button"><span
-              class="visually-hidden">Открыть меню.</span>
+          <button class="header__toggle no-js" type="button" aria-label="Открыть меню.">
+            <span></span>
           </button>
         </div>
         <nav class="nav no-js">
           <div class="nav__wrapper">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link is-active" href="#">Home</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#">Products</a>
@@ -56,7 +56,7 @@
                 <a class="nav__link" href="#">About</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Contact us</a>
+                <a class="nav__link" href="#">Contact&nbsp;us</a>
               </li>
             </ul>
           </div>
@@ -65,50 +65,53 @@
       <div class="slider swiper">
         <div class="swiper-wrapper">
           <div class="slider__card swiper-slide">
-            <svg width="100" height="84">
+            <svg class="slider__svg" width="100" height="84">
               <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
             </svg>
             <div>
-              <h2>Device Authentication</h2>
-              <p>SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security. We&nbsp;have
-                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication.
+              <h2 class="slider__title">Device Authentication</h2>
+              <p class="slider__text">SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security.
+                We&nbsp;have <br>
+                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication. <br>
                 Discover the possibilities with SALT.
               </p>
               <a class="slider__button button" href="#">Get started</a>
             </div>
           </div>
           <div class="slider__card swiper-slide">
-            <svg width="100" height="84">
+            <svg class="slider__svg" width="100" height="84">
               <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
             </svg>
             <div>
-              <h2>Device Authentication</h2>
-              <p>SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security. We&nbsp;have
-                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication.
+              <h2 class="slider__title">Device Authentication</h2>
+              <p class="slider__text">SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security.
+                We&nbsp;have <br>
+                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication. <br>
                 Discover the possibilities with SALT.
               </p>
-              <a slider__button button href="#">Get started</a>
+              <a class="slider__button button" href="#">Get started</a>
             </div>
           </div>
           <div class="slider__card swiper-slide">
-            <svg width="100" height="84">
+            <svg class="slider__svg" width="100" height="84">
               <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
             </svg>
             <div>
-              <h2>Device Authentication</h2>
-              <p>SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security. We&nbsp;have
-                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication.
+              <h2 class="slider__title">Device Authentication</h2>
+              <p class="slider__text">SALT Group is&nbsp;a&nbsp;world leader in&nbsp;authentication and security.
+                We&nbsp;have <br>
+                a&nbsp;range of&nbsp;services to&nbsp;improve user authentication. <br>
                 Discover the possibilities with SALT.
               </p>
-              <a slider__button button href="#">Get started</a>
+              <a class="slider__button button" href="#">Get started</a>
             </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
       <div class="header__box">
-        <a class="header__link" href="#">
-          <p>Find out more</p>
+        <a class="header__link" href="#production">
+          <p class="header__text">Find out more</p>
           <svg class="header__svg" width="62" height="71">
             <use xlink:href="img/sprite_auto.svg#icon-union"></use>
           </svg>
@@ -137,7 +140,7 @@
     </section>
     <section class="production">
       <div class="production__wrap">
-        <h3 class="production__title">What We Do</h3>
+        <h3 id="production" class="production__title">What We Do</h3>
         <ul class="production__list">
           <li class="production__item">
             <div>
@@ -149,14 +152,14 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/phone-desktop@1x.png 1x, img/production/phone-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/phone-mobile@1x.png"
+                <img class="production__img production__img--phone" src="img/production/phone-mobile@1x.png"
                   srcset="img/production/phone-mobile@2x.png 2x" alt="Phone pictured." width="106" height="109">
               </picture>
             </div>
             <h4 class="production__subtitle">Device Authentication</h4>
             <p class="production__text">Hardware-based device fingerprinting resilient to&nbsp;cloning, malware and
               device jailbreak/root.
-              Hardware-level control over the displayed&nbsp;UI independent of&nbsp;the device operating system.
+              Hardware-level control over&nbsp;the displayed&nbsp;UI independent of&nbsp;the device operating system.
               Hardware-level data protection.
             </p>
           </li>
@@ -170,7 +173,7 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/tablet-desktop@1x.png 1x, img/production/tablet-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/tablet-mobile@1x.png"
+                <img class="production__img production__img--tablet" src="img/production/tablet-mobile@1x.png"
                   srcset="img/production/tablet-mobile@2x.png 2x" alt="Tablet pictured." width="106" height="100">
               </picture>
             </div>
@@ -190,15 +193,16 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/cash-desktop@1x.png 1x, img/production/cash-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/cash-mobile@1x.png"
+                <img class="production__img production__img--cash" src="img/production/cash-mobile@1x.png"
                   srcset="img/production/cash-mobile@2x.png 2x" alt="cash pictured." width="100" height="100">
               </picture>
             </div>
             <h4 class="production__subtitle">Transaction Authentication</h4>
             <p class="production__text">High assurance out-of-band authentication of&nbsp;high impact transactions and
               instructions initiated
-              through electronic service delivery channels. Audit trail of&nbsp;verification for non-repudiation. Fraud
-              protection against man-in-the-middle and browser malware.
+              through electronic service delivery channels. Audit trail of&nbsp;verification for <br> non-repudiation.
+              Fraud
+              protection against <br class="production__br"> man-in-the-middle and browser malware.
             </p>
           </li>
           <li class="production__item">
@@ -211,12 +215,13 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/server-desktop@1x.png 1x, img/production/server-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/server-mobile@1x.png"
+                <img class="production__img production__img--server" src="img/production/server-mobile@1x.png"
                   srcset="img/production/server-mobile@2x.png 2x" alt="server pictured." width="100" height="105">
               </picture>
             </div>
-            <h4 class="production__subtitle">Contemporary authentication methods</h4>
-            <p class="production__text">Echidna authentication server to&nbsp;enable adaptive risk-based approach
+            <h4 class="production__subtitle production__subtitle--server">Contemporary authentication methods</h4>
+            <p class="production__text production__text--server">Echidna authentication server to&nbsp;enable adaptive
+              risk-based approach
               to&nbsp;security through
               a&nbsp;range of&nbsp;methods for different levels of&nbsp;authentication assurance from SMS OTPs,
               Challenge/Response, to&nbsp;more contemporary&nbsp;QR code signing and advanced connected mobile security
@@ -233,7 +238,7 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/hdd-desktop@1x.png 1x, img/production/hdd-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/hdd-mobile@1x.png"
+                <img class="production__img production__img--hdd" src="img/production/hdd-mobile@1x.png"
                   srcset="img/production/hdd-mobile@2x.png 2x" alt="hdd pictured." width="191" height="127">
               </picture>
             </div>
@@ -254,14 +259,15 @@
 
                 <source media="(min-width: 768px)"
                   srcset="img/production/cloud-desktop@1x.png 1x, img/production/cloud-desktop@2x.png 2x">
-                <img class="production__img" src="img/production/cloud-mobile@1x.png"
+                <img class="production__img production__img--cloud" src="img/production/cloud-mobile@1x.png"
                   srcset="img/production/cloud-mobile@2x.png 2x" alt="cloud pictured." width="210" height="108">
               </picture>
             </div>
             <h4 class="production__subtitle">Cloud & IoT Security</h4>
             <p class="production__text">Secure the identity and access of&nbsp;users, devices and Internet
-              of&nbsp;Things connecting into the
-              cloud. Support cloud adoption and migration of&nbsp;applications and data into private and public clouds.
+              of&nbsp;Things <br> connecting into the
+              cloud. Support cloud adoption and migration of&nbsp;applications and&nbsp;data into private and public
+              clouds.
             </p>
           </li>
         </ul>
@@ -279,7 +285,7 @@
       <div class="video-description">
         <button class="video-description__button" type="button"></button>
         <span class="video-description__desc">Feature video</span>
-        <p class="video-description__text">mSign Connected token</p>
+        <p class="video-description__text">mSign Connected <br> token</p>
       </div>
       <a class="product-spotlight__link button" href="#">More info</a>
     </section>
@@ -300,13 +306,13 @@
                 <input class="form__input" type="text" id="last-name" name="user-last-name" placeholder="Last Name"
                   required>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--address">
                 <label class="form__label" for="email">Email Address</label>
                 <input class="form__input" type="email" id="email" name="user-mail" placeholder="Email Address"
                   required>
               </li>
-              <li class="form__item">
-                <label class="form__label" class="visually-hidden" for="comment">Your message</label>
+              <li class="form__item form__item--textarea">
+                <label class="form__label" for="comment">Your message</label>
                 <textarea class="form__textarea" name="comment" id="comment" placeholder="Textarea"></textarea>
               </li>
             </ul>
@@ -377,7 +383,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-nav__inner">
           <h5 class="footer-nav__title">Links</h5>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
@@ -396,7 +402,7 @@
         </div>
       </nav>
       <section class="contacts">
-        <h5 class="contacts__title">Contacts sales</h5>
+        <h5 class="contacts__title">Contact sales</h5>
         <ul class="contacts__list">
           <li class="contacts__item">Phone:
             <a class="contacts__link" href="tel:+6139614416"> +61 3 9614 4416</a>
@@ -406,7 +412,7 @@
           </li>
         </ul>
       </section>
-      <div>
+      <div class="footer__logo">
         <picture>
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/logos/logo-footer-desktop@1x.webp 1x, img/logos/logo-footer-desktop@2x.webp 2x">

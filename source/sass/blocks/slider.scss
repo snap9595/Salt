@@ -1,33 +1,115 @@
 .slider {
-  /*  width: 200px; */
   padding-left: 28px;
   padding-right: 28px;
-  height: 300px;
-  margin-top: 40px;
+  height: 426px;
+  max-width: 100%;
+  margin-top: 55px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include vp-768 {
+    height: 350px;
+  }
+
+  @include vp-1024 {
+    padding-left: 81px;
+    height: 267px;
+    margin-top: 120px;
+    max-width: 1160px;
+  }
+
+  @include vp-1440 {
+    padding-left: 256px;
+    padding-right: 185px;
+    max-width: 1500px;
+  }
 }
 
-/* .slider__card {
-  height: 100px;
-} */
+.slider__card {
+  display: grid;
+
+  @include vp-1024 {
+    grid-template-columns: 3fr 2fr;
+    grid-auto-flow: dense;
+    align-items: center;
+  }
+}
+
+.slider__svg {
+  justify-self: center;
+
+  @include vp-768 {
+    width: 151px;
+    height: 124px;
+  }
+
+  @include vp-1024 {
+    grid-column-start: 2;
+    margin-top: 17px;
+  }
+}
+
+.slider__title {
+  margin: 0;
+  margin-top: 65px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 125%;
+  color: $color-default-white;
+
+  @include vp-768 {
+    margin-top: 0;
+    font-size: 3.43rem;
+    line-height: 120%;
+  }
+}
+
+.slider__text {
+  margin: 0;
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 125%;
+  color: $color-default-white;
+
+  @include vp-1024 {
+    margin-top: 6px;
+    line-height: 189%;
+    letter-spacing: -0.01em;
+  }
+}
 
 .slider__button {
-  width: max-content;
+  max-width: 174px;
+  text-align: center;
   padding: 18px;
+  margin-top: 26px;
+
+  @include vp-1024 {
+    margin-top: 45px;
+  }
 }
 
 .swiper-pagination {
   display: none;
 
-  @include vp-768 {
+  @include vp-1024 {
+    display: block;
     position: absolute;
-    right: 15px;
-    top: 150px;
+    right: 25px;
+    top: 83px;
+  }
+
+  @include vp-1440 {
+    right: 6px;
   }
 }
 
 .swiper-pagination-bullet {
   z-index: 15;
   display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
   width: 19px;
   height: 22px;
   background-image: url("../img/svg/icon-polygon.svg");

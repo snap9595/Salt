@@ -2,6 +2,10 @@
   width: 299px;
   min-height: 295px;
   background-color: $color-default-white;
+
+  @include vp-1024 {
+    margin-left: 3px;
+  }
 }
 
 .twitter__wrap {
@@ -15,7 +19,7 @@
 }
 
 .twitter__inner {
-  padding: 10px 16px;
+  padding: 10px 15px 11px;
   color: $color-default-white;
   background-color: $color-slate-blue;
 }
@@ -36,7 +40,7 @@
 
 .twitter__list {
   margin: 0;
-  padding: 20px 30px 18px;
+  padding: 20px 30px 17px;
   list-style: none;
 }
 
@@ -50,7 +54,7 @@
 
 .twitter__desc {
   margin: 0;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   font-size: 0.82rem;
   line-height: 138%;
   letter-spacing: -0.02em;
